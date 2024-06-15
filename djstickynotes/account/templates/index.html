@@ -1,0 +1,15 @@
+{% if request.user.is_authenticated %}
+  <p>{{ request.user.username }} | <a href="{% url 'logout' %}">Logout</a></p>
+  <br>
+
+  <h3>User Details</h3> 
+  <p> fname : {{ firstname }} 
+  <p> lname : {{ lastname }}
+  
+  <br><br>
+  <a href="{% url 'stickynote_list' %}">Notes Dashboard</a>
+
+{% else %}
+  <a href="{% url 'login' %}">Login</a>
+  <a href="{% url 'signup' %}">Signup</a>
+{% endif %}

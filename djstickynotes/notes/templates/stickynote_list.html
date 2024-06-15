@@ -1,0 +1,12 @@
+<!-- stickynote_list.html -->
+<a href="{% url 'stickynote_create' %}">Create New Sticky Note</a>
+<br><br>
+<a href="{% url 'home' %}">Back to user Dashboard</a>
+<br><br>
+<ul>
+    {% for stickynote in stickynotes %}
+      <li><a href="{% url 'stickynote_detail' stickynote.pk %}">{{ stickynote.title }}</a></li>
+    {% endfor %}
+  </ul>
+  
+  

@@ -1,0 +1,7 @@
+<!-- stickynote_confirm_delete.html -->
+<form method="post">
+    {% csrf_token %}
+    <p>Are you sure you want to delete "{{ stickynote.title }}"?</p>
+    <button type="submit">Confirm</button>
+  </form>
+  

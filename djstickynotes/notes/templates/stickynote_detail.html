@@ -1,0 +1,5 @@
+<!-- stickynote_detail.html -->
+<h1>{{ stickynote.title }}</h1>
+<p>{{ stickynote.content }}</p>
+<a href="{% url 'stickynote_update' stickynote.pk %}">Edit</a>
+<a href="{% url 'stickynote_delete' stickynote.pk %}">Delete</a>
